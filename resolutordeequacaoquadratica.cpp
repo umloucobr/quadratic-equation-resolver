@@ -41,7 +41,7 @@ void transformInFraction(double x1, double x2) {
     std::string input{};
     while (input != "yes" && input != "y" && input != "no" && input != "n")
     {
-        std::cout << "Transform in fraction?(y/n)\n";
+        std::cout << "Transform in fraction?(y/n).\n";
         std::cin >> input;
     }
     if (input == "yes" || input == "y")
@@ -85,7 +85,7 @@ double resolutor() {
 
         while (input != "yes" && input != "y" && input != "no" && input != "n")
         {
-            std::cout << "Go again?(y/n)\n";
+            std::cout << "Go again?(y/n).\n";
             std::cin >> input;
         }
         if (input == "yes" || input == "y")
@@ -106,7 +106,7 @@ double resolutor() {
         std::cout << "Delta value: " << delta << ".\n";
         while (input != "yes" && input != "y" && input != "no" && input != "n")
         {
-            std::cout << "Go again?(y/n)\n";
+            std::cout << "Go again?(y/n).\n";
             std::cin >> input;
         }
         if (input == "yes" || input == "y")
