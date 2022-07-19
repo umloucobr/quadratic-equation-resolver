@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <numeric>
 
 class Fraction {
     protected:
@@ -24,16 +25,27 @@ class RootToFraction : Fraction{
         }
 
         void setRoots(double root1, double root2) {
-            numerator = root1;
-            denominator = root2;
+            numerator = numerator * 100;
+            denominator = 100;
         }
 
-        void transformRootInFraction() {
+        int transformRootInFraction() {
+            //It will probably give wrong results if you give a number with more decimal places.
             numerator = numerator * 100;
+            int gcd{ std::gcd(static_cast<int>(numerator), 100) };
+            if (gcd == 1)
+            {
+                return 0;
+            }
+            else
+            {
+                numerator = numerator / gcd;
+                denominator = denominator / gcd;
+            }
         }
 
         void printFraction() {
-            std::cout << numerator << "/" << 100 << ".\n";
+            std::cout << numerator << "/" << denominator << ".\n";
         }
 };
 
@@ -46,8 +58,8 @@ void transformInFraction(double x1, double x2) {
     }
     if (input == "yes" || input == "y")
     {
-        RootToFraction root1{ x1, 1};
-        RootToFraction root2{ x2, 1 };
+        RootToFraction root1{ x1, 100 };
+        RootToFraction root2{ x2, 100 };
 
         root1.transformRootInFraction();
         root1.printFraction();
