@@ -71,9 +71,9 @@ void transformInFraction(double x1, double x2) {
 }
 
 double solver() {
-    int a{};
-    int b{};
-    int c{};
+    double a{};
+    double b{};
+    double c{};
     std::string input{};
 
     std::cout << "Enter the equation (only decimal).\n";
@@ -85,7 +85,7 @@ double solver() {
     std::cin >> c;
     std::cout << "Equation: " << a << "x^2" << std::showpos << b << "x" << c << "=0.\n";
     
-    int delta{ (b * b) - 4 * a * c };
+    double delta{ (b * b) - 4 * a * c };
     if (delta > 0)
     {
         double result1{ (-b + sqrt(delta)) / 2 * a };
