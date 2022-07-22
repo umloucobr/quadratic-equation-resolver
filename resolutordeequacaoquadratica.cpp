@@ -51,6 +51,7 @@ class RootToFraction : Fraction{
 
 void transformInFraction(double x1, double x2) {
     std::string input{};
+
     while (input != "yes" && input != "y" && input != "no" && input != "n")
     {
         std::cout << "Transform in fraction?(y/n).\n";
@@ -70,13 +71,12 @@ void transformInFraction(double x1, double x2) {
 }
 
 double resolutor() {
-    double a{};
-    double b{};
-    double c{};
+    int a{};
+    int b{};
+    int c{};
     std::string input{};
 
     std::cout << "Enter the equation (only decimal).\n";
-
     std::cout << "Enter A (without the variable):\n";
     std::cin >> a;
     std::cout << "Enter B (without the variable):\n";
@@ -85,7 +85,7 @@ double resolutor() {
     std::cin >> c;
     std::cout << "Equation: " << a << "x^2" << std::showpos << b << "x" << c << "=0.\n";
     
-    double delta{ (b * b) - 4 * a * c };
+    int delta{ (b * b) - 4 * a * c };
     if (delta > 0)
     {
         double result1{ (-b + sqrt(delta)) / 2 * a };
