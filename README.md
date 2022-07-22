@@ -1,4 +1,4 @@
-# Quadratic Equation Resolver
+# Quadratic Equation Solver
 A simple quadratic equation resolver.
 # How to Build
 Use the CMake GUI or use:
