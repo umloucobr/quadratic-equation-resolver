@@ -438,6 +438,8 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio
+/quadraticequationsolver.sln
+/quadraticequationsolver.vcxproj
+/quadraticequationsolver.vcxproj.filters
+/quadraticequationsolver.filters
 /resolutordeequacaoquadratica.sln
-/resolutordeequacaoquadratica.vcxproj
-/resolutordeequacaoquadratica.vcxproj.filters
