@@ -70,7 +70,7 @@ void transformInFraction(double x1, double x2) {
     }
 }
 
-double resolutor() {
+double solver() {
     int a{};
     int b{};
     int c{};
@@ -102,7 +102,7 @@ double resolutor() {
         }
         if (input == "yes" || input == "y")
         {
-            resolutor();
+            solver();
         }
         else
         {
@@ -123,7 +123,7 @@ double resolutor() {
         }
         if (input == "yes" || input == "y")
         {
-            resolutor();
+            solver();
         }
         else
         {
@@ -136,7 +136,7 @@ double resolutor() {
 }
 
 int main() {
-    resolutor();
+    solver();
 
     return 0;
 }
